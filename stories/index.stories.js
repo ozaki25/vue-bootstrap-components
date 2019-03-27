@@ -1,8 +1,7 @@
-/* eslint-disable react/react-in-jsx-scope, react/no-this-in-sfc */
-
 import { storiesOf } from "@storybook/vue";
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
+import { text } from "@storybook/addon-knobs";
 
 import MyButton from "./MyButton";
 import Welcome from "./Welcome";
@@ -16,7 +15,12 @@ storiesOf("Welcome", module).add("to Storybook", () => ({
 storiesOf("Button", module)
   .add("with text", () => ({
     components: { MyButton },
-    template: '<my-button @click="action">Hello Button</my-button>',
+    props: {
+      text: {
+        default: text("text", "MyButton")
+      }
+    },
+    template: `<my-button @click="action">{{text}}</my-button>`,
     methods: { action: action("clicked") }
   }))
   .add("with JSX", () => ({

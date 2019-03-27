@@ -1,4 +1,7 @@
-import { configure } from '@storybook/vue';
+import { addDecorator, configure } from '@storybook/vue';
+import { withKnobs } from '@storybook/addon-knobs';
+
+addDecorator(withKnobs);
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../stories', true, /\.stories\.js$/);
