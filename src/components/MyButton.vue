@@ -28,27 +28,25 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 button {
   display: inline-block;
+  padding: 6px 12px;
   margin-bottom: 0;
+  font-size: 14px;
   font-weight: normal;
   text-align: center;
-  white-space: nowrap;
   vertical-align: middle;
-  cursor: pointer;
+  white-space: nowrap;
   border: 1px solid transparent;
-  padding: 6px 12px;
-  font-size: 14px;
   border-radius: 4px;
+  cursor: pointer;
 }
 button[disabled] {
   cursor: not-allowed;
+  opacity: .65;
   filter: alpha(opacity=65);
-  opacity: 0.65;
   pointer-events: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
 }
 .nomal {
   color: #333;
