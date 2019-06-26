@@ -33,8 +33,11 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.2",
     "node-sass": "^4.12.0",
+    "prettier-stylelint": "^0.4.2",
     "sass-loader": "^7.1.0",
-    "stylelint-config-standard": "^18.3.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended-scss": "^3.3.0",
+    "stylelint-scss": "^3.8.0",
     "vue-template-compiler": "^2.6.10"
   }
 }
