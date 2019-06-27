@@ -4,7 +4,7 @@
   "private": true,
   "main": "dist/my-component.js",
   "scripts": {
-    "build": "rollup --config rollup.config.js --format umd --file dist/my-component.js",
+    "build": "rollup --config build/rollup.config.js --format umd --file dist/my-component.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "build-storybook && cd storybook-static && git init && git add -A && git commit -m 'deploy storybook' && git push -f git@github.com:ozaki25/vue-storybook-sample.git master:gh-pages"
