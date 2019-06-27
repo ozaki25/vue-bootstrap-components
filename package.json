@@ -2,7 +2,9 @@
   "name": "vue-storybook-sample",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/my-component.js",
   "scripts": {
+    "build": "rollup --config rollup.config.js --format umd --file dist/my-component.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "build-storybook && cd storybook-static && git init && git add -A && git commit -m 'deploy storybook' && git push -f git@github.com:ozaki25/vue-storybook-sample.git master:gh-pages"
@@ -27,6 +29,10 @@
     "eslint-plugin-vue": "^5.2.2",
     "node-sass": "^4.12.0",
     "prettier-stylelint": "^0.4.2",
+    "rollup": "^1.16.2",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-vue": "^5.0.1",
     "sass-loader": "^7.1.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recommended-scss": "^3.3.0",
