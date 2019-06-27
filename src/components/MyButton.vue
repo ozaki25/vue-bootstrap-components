@@ -39,36 +39,49 @@ button {
   line-height: 1.42857143;
   white-space: nowrap;
   text-align: center;
-  text-transform: none;
   vertical-align: middle;
-  background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
   cursor: pointer;
-  -webkit-appearance: button;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-
+  &:hover {
+    outline: 0;
+  }
   &:focus,
   &:active {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
   }
-}
-button[disabled] {
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  pointer-events: none;
+  &:focus,
+  &:hover,
+  &:active {
+    color: #333;
+    text-decoration: none;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
+  &:disabled {
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    pointer-events: none;
+  }
 }
 .nomal {
   color: #333;
   background-color: #fff;
   border-color: #ccc;
+  &:focus {
+    border-color: #8c8c8c;
+  }
+  &:hover,
+  &:active {
+    border-color: #adadad;
+  }
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: #e6e6e6;
+  }
 }
 .primary {
   color: #fff;
