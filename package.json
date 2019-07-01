@@ -2,7 +2,7 @@
   "name": "vue-storybook-sample",
   "version": "0.1.0",
   "private": true,
-  "main": "dist/my-component.js",
+  "main": "dist/my-component-min.js",
   "scripts": {
     "build": "rollup -c build/rollup.config.js",
     "storybook": "start-storybook -p 6006",
