@@ -4,7 +4,7 @@
   "private": true,
   "main": "dist/my-component.js",
   "scripts": {
-    "build": "rollup --config build/rollup.config.js --format umd --file dist/my-component.js",
+    "build": "rollup -c build/rollup.config.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "build-storybook && cd storybook-static && git init && git add -A && git commit -m 'deploy storybook' && git push -f git@github.com:ozaki25/vue-storybook-sample.git master:gh-pages"
@@ -20,6 +20,7 @@
     "@storybook/addon-links": "^5.1.9",
     "@storybook/addons": "^5.1.9",
     "@storybook/vue": "^5.1.9",
+    "@vue/babel-preset-app": "^3.8.0",
     "@vue/eslint-config-prettier": "^4.0.1",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
@@ -37,6 +38,7 @@
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recommended-scss": "^3.3.0",
     "stylelint-scss": "^3.8.0",
+    "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.10"
   }
 }
