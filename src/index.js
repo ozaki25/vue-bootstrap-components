@@ -1,3 +1,3 @@
-import MyButton from "./components/MyButton.vue";
+import myButton from "./components/MyButton.vue";
 
-export default MyButton;
+export const MyButton = myButton;
