@@ -10,7 +10,7 @@ export default {
   props: {
     onClick: {
       type: Function,
-      default: null
+      default: () => {}
     },
     nomal: {
       type: Boolean,
