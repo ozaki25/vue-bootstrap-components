@@ -1,4 +1,4 @@
-# vue-storybook-sample
+# vue-bootstrap-components
 
 ## Project setup
 ```
