@@ -7,6 +7,7 @@
           class="navbar-toggle collapsed"
           data-toggle="collapse"
           data-target="#navigation"
+          @click="onClick"
         >
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -14,7 +15,7 @@
         </button>
         <a class="navbar-brand" :href="titleLink">{{title}}</a>
       </div>
-      <div class="collapse navbar-collapse" id="navigation">
+      <div class="collapse navbar-collapse" :class="{in: isCollapsed}" id="navigation">
         <ul class="nav navbar-nav">
           <li class="active">
             <a href="#">Link</a>
@@ -49,6 +50,16 @@ export default {
       type: Boolean,
       default: true
     }
+  },
+  methods: {
+    onClick: function() {
+      this.isCollapsed = !this.isCollapsed;
+    }
+  },
+  data: function() {
+    return {
+      isCollapsed: false
+    };
   }
 };
 </script>
@@ -63,6 +74,10 @@ a {
 
 .collapse {
   display: none;
+
+  &.in {
+    display: block;
+  }
 }
 
 .nav {
@@ -100,7 +115,6 @@ a {
   }
 
   .open > a {
-    &,
     &:hover,
     &:focus {
       background-color: #eee;
@@ -111,12 +125,14 @@ a {
 
 .navbar {
   position: relative;
+  clear: both;
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
 
 .navbar-header {
+  clear: both;
   @media (min-width: $min-sm-width) {
     float: left;
   }
@@ -130,6 +146,7 @@ a {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 
   &.in {
+    clear: both;
     overflow-y: auto;
   }
 
@@ -206,7 +223,6 @@ a {
 
 .navbar-brand {
   float: left;
-  height: 50px;
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
