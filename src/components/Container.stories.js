@@ -4,9 +4,11 @@ import Container from "./Container.vue";
 
 const story = storiesOf("Container", module);
 
-story.add("nomal", () => ({
-  components: { Container },
-  template: `
+story.add(
+  "nomal",
+  () => ({
+    components: { Container },
+    template: `
     <Container>
       <table style="width: 100%;" border="1">
         <thead>
@@ -26,11 +28,17 @@ story.add("nomal", () => ({
       </table>
     </Container>
   `
-}));
+  }),
+  {
+    info: {}
+  }
+);
 
-story.add("fluid", () => ({
-  components: { Container },
-  template: `
+story.add(
+  "fluid",
+  () => ({
+    components: { Container },
+    template: `
     <Container fluid>
       <table style="width: 100%;" border="1">
         <thead>
@@ -50,4 +58,8 @@ story.add("fluid", () => ({
       </table>
     </Container>
   `
-}));
+  }),
+  {
+    info: {}
+  }
+);
