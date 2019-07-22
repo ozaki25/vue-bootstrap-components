@@ -6,47 +6,65 @@ import MyButton from "./MyButton.vue";
 
 const story = storiesOf("MyButton", module);
 
-story.add("nomal", () => ({
-  components: { MyButton },
-  props: {
-    text: {
-      default: text("Text", "Hello")
+story.add(
+  "nomal",
+  () => ({
+    components: { MyButton },
+    props: {
+      text: {
+        default: text("Text", "Hello")
+      },
+      disabled: {
+        default: boolean("disabled", false)
+      }
     },
-    disabled: {
-      default: boolean("disabled", false)
-    }
-  },
-  methods: {
-    onClick: action("on click")
-  },
-  template: `<MyButton :onClick="onClick" :disabled="disabled" >{{text}}</MyButton>`
-}));
-
-story.add("primary", () => ({
-  components: { MyButton },
-  props: {
-    text: {
-      default: text("Text", "Hello")
+    methods: {
+      onClick: action("on click")
     },
-    disabled: {
-      default: boolean("disabled", false)
-    }
-  },
-  methods: {
-    onClick: action("on click")
-  },
-  template: `<MyButton :onClick="onClick" :disabled="disabled" primary>{{text}}</MyButton>`
-}));
+    template: `<MyButton :onClick="onClick" :disabled="disabled" >{{text}}</MyButton>`
+  }),
+  {
+    info: {}
+  }
+);
 
-story.add("disabled", () => ({
-  components: { MyButton },
-  props: {
-    text: {
-      default: text("Text", "Hello")
-    }
-  },
-  methods: {
-    onClick: action("on click")
-  },
-  template: `<MyButton @click.native="onClick" disabled>{{text}}</MyButton>`
-}));
+story.add(
+  "primary",
+  () => ({
+    components: { MyButton },
+    props: {
+      text: {
+        default: text("Text", "Hello")
+      },
+      disabled: {
+        default: boolean("disabled", false)
+      }
+    },
+    methods: {
+      onClick: action("on click")
+    },
+    template: `<MyButton :onClick="onClick" :disabled="disabled" primary>{{text}}</MyButton>`
+  }),
+  {
+    info: {}
+  }
+);
+
+story.add(
+  "disabled",
+  () => ({
+    components: { MyButton },
+    props: {
+      text: {
+        default: text("Text", "Hello")
+      }
+    },
+    methods: {
+      onClick: action("on click")
+    },
+    template: `<MyButton @click.native="onClick" disabled>{{text}}</MyButton>`
+  }),
+  {
+    info: {}
+  }
+);

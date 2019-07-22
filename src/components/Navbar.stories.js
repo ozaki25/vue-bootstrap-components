@@ -4,10 +4,13 @@ import Navbar from "./Navbar.vue";
 
 const story = storiesOf("Navbar", module);
 
-story.add("nomal", () => ({
-  components: { Navbar },
-  template: `
-    <Navbar title="タイトル" nomal>
-    </Navbar>
-  `
-}));
+story.add(
+  "nomal",
+  () => ({
+    components: { Navbar },
+    template: `<Navbar title="タイトル" nomal />`
+  }),
+  {
+    info: {}
+  }
+);
