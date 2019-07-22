@@ -38,6 +38,7 @@
     "rollup-plugin-terser": "^5.1.0",
     "rollup-plugin-vue": "^5.0.1",
     "sass-loader": "^7.1.0",
+    "storybook-addon-vue-info": "^1.2.1",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recommended-scss": "^3.3.0",
     "stylelint-scss": "^3.9.0",
